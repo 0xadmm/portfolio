@@ -1,82 +1,142 @@
 <!DOCTYPE html>
+<html lang="fr">
 
-    <html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        <head>
-            <meta charset="utf-8" lang="fr">
-            <title>Portfolio</title>
-            <link rel="stylesheet" href="style.css">
-        </head>
+<body>
 
+    <!-- Icône de téléchargement réutilisée par tous les boutons -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v12"/>
+            <path d="M7 10l5 5 5-5"/>
+            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/>
+        </symbol>
+    </svg>
 
+    <header>
+        <h1>Martineau Adam</h1>
+    </header>
 
-        <body>
+    <main class="container">
 
+        <section class="flex">
 
-            <header>
+            <!-- PROFIL -->
+            <article class="intro">
+                <h3>Dev Ops</h3>
+                <p>Je suis étudiant DevOps au Conservatoire National des Arts et Métiers et je vise à accomplir un stage du 1er mars au 23 avril 2027.</p>
+                <p>Ci dessous se trouvent le détail de mes compétences techniques ainsi que des projets que j'ai développé en autonomie.</p>
+            </article>
 
-                <h1>Martineau Adam</h1>
+            <!-- COMPÉTENCES -->
+            <article class="intro">
+                <h3>Mes compétences</h3>
 
-            </header>
-
-
-
-            <main class="container">
-                <section class="flex">
-                    <h2>Mes réalisations</h2>
-
-                    <article class="intro">
-                        <p>
-                            Je suis étudiant au Conservatoire National Arts et Métiers en tant que DevOps et je recherche un stage de fin d'étude du 1er mars au 23 avril 2027.
-                        </p>
+                <div class="skills">
+                    <article class="card_intro">
+                        <h4>Programmation logicielle</h4>
+                        <p>Python</p>
+                        <p>C/C++</p>
+                        <p>Java</p>
                     </article>
 
-                    <article class="intro">
-                        <p>
-                            En tant que développeur je cherche à concevoir des outils permettant d'automatiser des systèmes(back-end, serveurs, logiciels).
-                            Ci dessous se trouve un apperçu de quelques programmes que j'ai développé et que j'utilise souvent.
-                        </p>
+                    <article class="card_intro">
+                        <h4>Maintenance des systèmes</h4>
+                        <p>Maitrise de Windows et Linux</p>
+                        <p>Scripting Bash/PowerShell/netsh</p>
+                        <p>VM avec Oracle</p>
                     </article>
 
-
-                    <article class="card">
-                        <a href="https://github.com/0xadmm/chatbot">Chatbot PyTorch
-                    
-                        <p>Comment fonctionne une IA ?</p>
-                        <p>La meilleure façon de comprendre comment fonctionne un programme est de le coder.</p>
-                        <p>Utiliser la bibliothèque PyTorch pour le cerveau et Tkinter pour l'interface.</p>
-                        </a>
+                    <article class="card_intro">
+                        <h4>Exploitation des IA</h4>
+                        <p>Agents IA</p>
+                        <p>IA locale avec Ollama</p>
+                        <p>IA locale avec LM Studio</p>
                     </article>
 
-                    <article class="card">
-                        <a href="https://github.com/0xadmm/WIFI_GET_MDP">Récupérateur de clé WiFi
-
-                        <p>Comment retrouver un mot de passe WiFi oubié ?</p>
-                        <p>Il faut trouver une manière de récupérer la clé WiFi enregistrée par la machine.</p>
-                        <p>Créer un script qui ouvre automatiquement un terminal et éxécute les commandes nécessaires.</p>
-                        </a>
+                    <article class="card_intro">
+                        <h4>Développement Web</h4>
+                        <p>HTML/CSS</p>
+                        <p>JavaScript</p>
+                        <p>PHP</p>
                     </article>
+                </div>
+            </article>
 
-                    <article class="card">
-                        <a href="https://github.com/0xadmm/gpumonit">Moniteur GPU
+            <!-- RÉALISATIONS -->
+            <h2>Mes réalisations</h2>
 
-                        <p>Le gestionnaire de tâches par défaut de Linux ne surveille pas le GPU.</p>
-                        <p>La solution est de créer son propre gestionnaire de tâches.</p>
-                        <p>Automatiser l'éxécution de commandes "nvidia-smi" et afficher le résultat dans une interface Tkinter.</p>
-                        </a>
+            <article class="card">
+                <h3>IA ChatBot</h3>
+                <figure class="card-media">
+                    <img src="" alt="Image du projet">
+                </figure>
+                <p>Un chatbot capable de lire et de comprendre les intentions d'un message pour donner la réponse apropriée.</p>
+                <p>Son principe est identique à celui des chatbot utilisés pour le support utilisateur de certains services.</p>
+                <p>Outils utilisés : PyTorch, Tkinter</p>
+                <a class="btn-download" href="https://github.com/0xadmm/chatbot" target="_blank" rel="noopener">
+                    <svg aria-hidden="true"><use href="#icon-download"/></svg>
+                    Voir le code
+                </a>
+            </article>
 
-                    </article>
+            <article class="card">
+                <h3>Moniteur GPU</h3>
+                <figure class="card-media">
+                    <img src="" alt="Image du projet">
+                </figure>
+                <p>Un gestionnaire de tâches qui surveille l'utilisation du GPU.</p>
+                <p>Conçu spécifiquement pour Linux et les cartes graphiques Nvidia.</p>
+                <p>Outils utilisés : Python, Bash.</p>
+                <a class="btn-download" href="https://github.com/0xadmm/gpumonit" target="_blank" rel="noopener">
+                    <svg aria-hidden="true"><use href="#icon-download"/></svg>
+                    Voir le code
+                </a>
+            </article>
 
-                </section>
-            </main>
+            <article class="card">
+                <h3>Récupérateur de clée Wifi</h3>
+                <figure class="card-media">
+                    <img src="" alt="Image du projet">
+                </figure>
+                <p>Un script qui récupère et affiche le mot de passe enregistré du Wifi utilisé.</p>
+                <p>Fonctionne sur Windows et Linux et peut s'avérer pratique lorsque l'on ne retrouve plus le mot de passe.</p>
+                <p>Outils utilisés : Python, Bash, netsh</p>
+                <a class="btn-download" href="https://github.com/0xadmm/WIFI_GET_MDP" target="_blank" rel="noopener">
+                    <svg aria-hidden="true"><use href="#icon-download"/></svg>
+                    Voir le code
+                </a>
+            </article>
 
+            <article class="card">
+                <h3>Installateur d'extension Godot</h3>
+                <figure class="card-media">
+                    <img src="" alt="Image du projet">
+                </figure>
+                <p>Godot Engine est un moteur de jeu open-source récent et personnalisable semblable à Unity et Unreal Engine</p>
+                <p>Ce script installe une extension qui permet de modifier librement les fonctionnalités du moteur et d'en créer de nouvelles.</p>
+                <p>Outils utilisés : C++, Python</p>
+                <a class="btn-download" href="https://github.com/0xadmm/chatbot" target="_blank" rel="noopener">
+                    <svg aria-hidden="true"><use href="#icon-download"/></svg>
+                    Voir le code
+                </a>
+            </article>
 
+        </section>
 
-            <footer>
-                <p>Portfolio</p>
-            </footer>
+    </main>
 
-        </body>
+    <footer>
+        <p>Portfolio</p>
+    </footer>
 
+</body>
 
-    </html>
+</html>
